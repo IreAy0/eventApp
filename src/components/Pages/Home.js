@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import EventCard from '../cards/EventCard'
 import Layout from '../Layout/Layout'
 import { event } from '../utils/api';

@@ -1,6 +1,5 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import overlay from '../../assets/images/Overlay.png'
-import { useForm } from "react-hook-form";
 
 
 export default function RegisterHeader() {

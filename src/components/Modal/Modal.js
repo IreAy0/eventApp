@@ -15,7 +15,6 @@ const customStyles = {
 };
  
 export default function DownloadModal({children, openModal, close}) {
-  const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
   return (
     <div>

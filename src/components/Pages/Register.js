@@ -1,5 +1,5 @@
 import RegisterHeader from "../Header/RegisterHeader";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import QRCode from "react-qr-code";
 import html2canvas from "html2canvas";
@@ -10,7 +10,6 @@ export default function Register() {
   const {
     register,
     handleSubmit,
-    setError,
     reset ,
     formState: { errors },
   } = useForm();
@@ -250,7 +249,7 @@ export default function Register() {
                     </div>
                   )}
                 </div>
-                <div className="mx-auto lg:w-1/2 md:w-1/2 flex flex-col mb-6 w-full  sm:px-0 bg-white flex justify-end">
+                <div className="mx-auto lg:w-1/2 md:w-1/2  flex-col mb-6 w-full  sm:px-0 bg-white flex justify-end">
                   <button
                     type="submit"
                     className="bg-gradient-to-r from-mainPink to-mainPurple focus:outline-none transition duration-150 ease-in-out rounded text-white px-8 py-4 text-sm"
