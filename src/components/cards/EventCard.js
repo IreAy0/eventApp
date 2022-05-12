@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 
 export default function EventCard({event}) {
   const randomImage = faker.image.nightlife(800, 600, true)  // 'http://loremflickr.com/1234/2345/fashion?56789'
-  
+  const randomName = faker.name.findName();
   return (
    
 <div className='relative h-[500px]'>
@@ -19,7 +19,7 @@ export default function EventCard({event}) {
         <div class="p-4 md:p-8 rounded-2xl  bg-white shadow-lg">
             <div class="mb-3 text-2xl flex flex-wrap lg:flex-nowrap gap-4 justify-between items-center leading-none font-medium">
                 <a class="font-bold w-full xl:w-4/5 break-all bg-clip-text text-transparent bg-gradient-to-r from-mainPink to-mainPurple" href="/"  title="Heading Link">
-                    {event.name}
+                    {randomName}
                 </a>
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#510FD5]  to-[#8292E6] '>
                 ${event.amount}
