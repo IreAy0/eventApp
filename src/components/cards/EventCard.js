@@ -2,7 +2,7 @@ import React from 'react'
 import { faker } from '@faker-js/faker';
 
 export default function EventCard({event}) {
-  const randomName = faker.image.image(1234, 2345, true)  // 'http://loremflickr.com/1234/2345/fashion?56789'
+  const randomName = faker.image.image(800, 600, true)  // 'http://loremflickr.com/1234/2345/fashion?56789'
   
   console.log(randomName);
   return (
