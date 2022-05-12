@@ -1,9 +1,9 @@
 import React from 'react'
-import { faker } from '@faker-js/faker';
+
 
 export default function EventCard({event}) {
-  const randomImage = faker.image.nightlife(800, 600, true)  // 'http://loremflickr.com/1234/2345/fashion?56789'
-  const randomName = faker.name.findName();
+ 
+  const randomImage = Math.floor((Math.random() * 100) + 1)
   return (
    
 <div className='relative h-[500px]'>
@@ -11,7 +11,7 @@ export default function EventCard({event}) {
     <div class=" bg-gray-300 rounded-2xl h-full">
         
             <picture class="relative block w-full h-full pb bg-gray-300 overflow-hidden shadow-lg rounded-2xl " style={{"paddingTop": "75%"}}>
-                <img class="absolute inset-0 w-full h-full object-cover" src={randomImage}  alt="A random img from Unsplash" />
+                <img class="absolute inset-0 w-full h-full object-cover" src={`http://loremflickr.com/800/600/events?${randomImage}`}  alt="A random img from Unsplash" />
             </picture>
       
     </div>
@@ -19,7 +19,7 @@ export default function EventCard({event}) {
         <div class="p-4 md:p-8 rounded-2xl  bg-white shadow-lg">
             <div class="mb-3 text-2xl flex flex-wrap lg:flex-nowrap gap-4 justify-between items-center leading-none font-medium">
                 <a class="font-bold w-full xl:w-4/5 break-all bg-clip-text text-transparent bg-gradient-to-r from-mainPink to-mainPurple" href="/"  title="Heading Link">
-                    {randomName}
+                    {event.name}
                 </a>
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#510FD5]  to-[#8292E6] '>
                 ${event.amount}
