@@ -37,7 +37,7 @@ export default function Register() {
         format: [canvas.width, canvas.height],
       });
       pdf.addImage(imgData, "png", 100, 0, canvas.width, canvas.height);
-      pdf.save("download.pdf");
+      pdf.save(`${formData?.name}.pdf`);
     });
   };
 

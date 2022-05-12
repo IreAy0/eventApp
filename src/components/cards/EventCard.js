@@ -1,7 +1,10 @@
 import React from 'react'
+import { faker } from '@faker-js/faker';
 
 export default function EventCard({event}) {
-  console.log(event);
+  const randomName = faker.image.image(1234, 2345, true)  // 'http://loremflickr.com/1234/2345/fashion?56789'
+  
+  console.log(randomName);
   return (
    
 <div className='relative h-[500px]'>
@@ -9,7 +12,7 @@ export default function EventCard({event}) {
     <div class=" bg-gray-300 rounded-2xl h-full">
         
             <picture class="relative block w-full h-full pb bg-gray-300 overflow-hidden shadow-lg rounded-2xl " style={{"paddingTop": "75%"}}>
-                <img class="absolute inset-0 w-full h-full object-cover" src="https://picsum.photos/800/600" alt="A random img from Unsplash" />
+                <img class="absolute inset-0 w-full h-full object-cover" src={`${randomName}`} loading="lazy" alt="A random img from Unsplash" />
             </picture>
       
     </div>
